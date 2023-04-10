@@ -10,7 +10,8 @@ Let $P$ be the player's current position, $h$ be the player's eye height, and $P
 $$
 P' = P + \begin{pmatrix} 0 \\ h \\ 0 \end{pmatrix}
 $$
-Programtically:
+
+Programatically:
 ```php
 $player->getLocation()->add(0, $playerAPI->getPlayer()->getEyeHeight(), 0);
 ```
@@ -27,7 +28,7 @@ $$
 v' = v \cdot d
 $$
 
-Programtically:
+Programatically:
 ```php
 $player->getDirectionVector()->multiply($distance);
 ```
@@ -42,7 +43,8 @@ Let $v_1$ and $v_2$ be the two given vectors and $d$ be the resulting distance.
 $$
 d = \sqrt{(v_{1x} - v_{2x})^2 + (v_{1y} - v_{2y})^2 + (v_{1z} - v_{2z})^2}
 $$
-Programtically:
+
+Programatically:
 ```php
 sqrt(pow($from->getX() - $to->getX(), 2) + pow($from->getY() - $to->getY(), 2) + pow($from->getZ() - $to->getZ(), 2));
 ```
@@ -57,7 +59,8 @@ Let $p$ be the given ping number and $n$ be the resulting integer value.
 $$
 n = \left\lceil\frac{p}{50}\right\rceil
 $$
-Programtically:
+
+Programatically:
 ```php
 return (int)ceil($ping / 50);
 ```
